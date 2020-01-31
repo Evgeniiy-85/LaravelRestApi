@@ -79,6 +79,9 @@ class AddProductsData extends Migration
      */
     public function down()
     {
-        //
+        Schema::table('products', function($table)
+        {
+            $table->truncate();
+        });
     }
 }

@@ -66,6 +66,9 @@ class AddProductsInCategoriesData extends Migration
      */
     public function down()
     {
-       //
+        Schema::table('prod_in_cat', function($table)
+        {
+            $table->truncate();
+        });
     }
 }

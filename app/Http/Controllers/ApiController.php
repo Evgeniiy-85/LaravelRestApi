@@ -111,11 +111,9 @@ class ApiController extends Controller
                 throw new \Exception('Категория не найдена');
             }
 
-            $category = $category->toArray();
-
             return \Response::json([
                 'status' => 'ok',
-                'category' => $category
+                'category' => $category->toArray()
             ], 200, [
                 'Content-Type'                     => 'application/json; charset=UTF-8',
                 'charset'                          => 'utf-8',
@@ -144,11 +142,9 @@ class ApiController extends Controller
                 throw new \Exception('Категории не найдены');
             }
 
-            $categories = $categories->toArray();
-
             return \Response::json([
                 'status' => 'ok',
-                'categories' => $categories
+                'categories' => $categories->toArray()
             ], 200, [
                 'Content-Type'                     => 'application/json; charset=UTF-8',
                 'charset'                          => 'utf-8',

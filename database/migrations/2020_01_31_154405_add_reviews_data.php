@@ -78,6 +78,9 @@ class AddReviewsData extends Migration
      */
     public function down()
     {
-        //
+        Schema::table('reviews', function($table)
+        {
+            $table->truncate();
+        });
     }
 }

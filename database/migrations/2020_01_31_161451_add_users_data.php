@@ -44,6 +44,9 @@ class AddUsersData extends Migration
      */
     public function down()
     {
-        //
+        Schema::table('users', function($table)
+        {
+            $table->truncate();
+        });
     }
 }
