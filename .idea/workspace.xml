@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b2a4622a-d3cb-4a31-ac39-27538d04136e" name="Default Changelist" comment="" />
+    <list default="true" id="b2a4622a-d3cb-4a31-ac39-27538d04136e" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,8 +18,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/routes/api.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="17" column="3" selection-start-line="17" selection-start-column="3" selection-end-line="17" selection-end-column="3" />
+            <state relative-caret-position="396">
+              <caret line="18" selection-start-line="18" selection-end-line="25" selection-end-column="52" />
             </state>
           </provider>
         </entry>
@@ -220,7 +222,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="228" />
     <option name="y" value="435" />
     <option name="width" value="1440" />
@@ -260,6 +262,17 @@
             <path>
               <item name="LaravelRestApi" type="b2602c69:ProjectViewProjectNode" />
               <item name="LaravelRestApi" type="462c0819:PsiDirectoryNode" />
+              <item name="database" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="LaravelRestApi" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LaravelRestApi" type="462c0819:PsiDirectoryNode" />
+              <item name="database" type="462c0819:PsiDirectoryNode" />
+              <item name="migrations" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="LaravelRestApi" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LaravelRestApi" type="462c0819:PsiDirectoryNode" />
               <item name="routes" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -269,6 +282,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../style-toyota" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -313,18 +327,18 @@
       <workItem from="1580283249754" duration="8957000" />
       <workItem from="1580365050839" duration="22386000" />
       <workItem from="1580449230983" duration="29415000" />
-      <workItem from="1580490654931" duration="535000" />
+      <workItem from="1580490654931" duration="660000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="79806000" />
+    <option name="totallyTimeSpent" value="79931000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1721" height="935" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22970535" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.38905594" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -616,8 +630,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/api.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="17" column="3" selection-start-line="17" selection-start-column="3" selection-end-line="17" selection-end-column="3" />
+        <state relative-caret-position="396">
+          <caret line="18" selection-start-line="18" selection-end-line="25" selection-end-column="52" />
         </state>
       </provider>
     </entry>
