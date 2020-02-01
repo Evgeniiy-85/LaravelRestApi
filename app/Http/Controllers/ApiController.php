@@ -20,19 +20,17 @@ class ApiController extends Controller
                 throw new \Exception('Товар не найден');
             }
 
-            $product = $product->toArray();
-
             $reviews = App\Review::select(['id', 'review', 'rating', 'prod_id', 'user_id'])
                 ->with(['user' => function ($query) {
                     $query->select(['users.id', 'users.name']);
                 }])
-                ->where('prod_id', $product['id'])
+                ->where('prod_id', $product->id)
                 ->get()
                 ->toArray();
 
             return \Response::json([
                 'status' => 'ok',
-                'product' => array_merge($product, ['reviews' => $reviews])
+                'product' => array_merge($product->toArray(), ['reviews' => $reviews])
             ], 200, [
                 'Content-Type'                     => 'application/json; charset=UTF-8',
                 'charset'                          => 'utf-8',
@@ -50,13 +48,22 @@ class ApiController extends Controller
         }
     }
 
-    public function products()
+    public function products(Request $request)
     {
         try {
-            $products = App\Product::select(['id', 'name', 'description', 'short_description', 'price'])
-                ->with(['categories' => function ($query) {
+            $category_id = (int)$request->get('category_id');
+
+            $query = App\Product::select(['products.id', 'products.name', 'products.description', 'products.short_description', 'products.price'])
+                ->with(['categories' => function ($query) use ($category_id) {
                     $query->select(['categories.id', 'categories.name', 'categories.description']);
                 }])
+                ->join('prod_in_cat', 'prod_in_cat.prod_id', '=', 'products.id');
+
+            if ($category_id) {
+                $query->where('prod_in_cat.cat_id', $category_id);
+            }
+
+            $products = $query
                 ->paginate(12)
                 ->toArray();
 
