@@ -51,15 +51,13 @@ class ApiController extends Controller
     public function products(Request $request)
     {
         try {
-            $category_id = (int)$request->get('category_id');
-
             $query = App\Product::select(['products.id', 'products.name', 'products.description', 'products.short_description', 'products.price'])
-                ->with(['categories' => function ($query) use ($category_id) {
+                ->with(['categories' => function ($query) {
                     $query->select(['categories.id', 'categories.name', 'categories.description']);
                 }])
                 ->join('prod_in_cat', 'prod_in_cat.prod_id', '=', 'products.id');
 
-            if ($category_id) {
+            if ($category_id = (int)$request->get('category_id')) {
                 $query->where('prod_in_cat.cat_id', $category_id);
             }
 
