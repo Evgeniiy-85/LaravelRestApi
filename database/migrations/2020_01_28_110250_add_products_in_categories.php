@@ -17,6 +17,7 @@ class AddProductsInCategories extends Migration
             $table->increments('id');
             $table->integer('prod_id');
             $table->integer('cat_id');
+            $table->timestamps();
         });
     }
 
